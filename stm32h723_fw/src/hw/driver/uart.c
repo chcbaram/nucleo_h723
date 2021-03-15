@@ -35,7 +35,7 @@ static uart_tbl_t uart_tbl[UART_MAX_CH];
 
 #define UART_MAX_BUF_SIZE    256
 
-static uint8_t rx_buf[UART_MAX_CH][UART_MAX_BUF_SIZE];
+static __attribute__((section(".none_cache_mem"))) uint8_t rx_buf[UART_MAX_CH][UART_MAX_BUF_SIZE];
 
 UART_HandleTypeDef huart3;
 DMA_HandleTypeDef hdma_usart3_rx;

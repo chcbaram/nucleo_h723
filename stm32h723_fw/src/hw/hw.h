@@ -16,6 +16,7 @@
 #include "button.h"
 #include "uart.h"
 #include "cli.h"
+#include "psram.h"
 
 
 void hwInit(void);
